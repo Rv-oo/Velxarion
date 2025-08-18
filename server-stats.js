@@ -2,6 +2,7 @@ function animateCounter(id, start, end, duration = 1000) {
   const el = document.getElementById(id);
   if (!el) return;
 
+  const BOT_API_URL = process.env.BOT_API_URL;
   const startTime = performance.now();
 
   function update(currentTime) {
@@ -58,4 +59,5 @@ async function fetchServerStats() {
 
 fetchServerStats();
 setInterval(fetchServerStats, 30000);
+
 
