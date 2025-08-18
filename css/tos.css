@@ -1,0 +1,58 @@
+.tos-section {
+  padding-top: 120px; /* Geser ke bawah, bisa sesuaikan */
+  padding-bottom: 0px;
+}
+.tos-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #161b22;
+  border-radius: 16px;
+  color: #f0f0f0;
+  line-height: 1.8;
+}
+
+.tos-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #8b5cf6;
+}
+
+.tos-section h2 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  color: #ccc;
+}
+
+.tos-section p {
+  font-size: 1rem;
+  color: #ddd;
+}
+.tos-section ul {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.tos-section ul li::marker {
+  content: "• ";
+  color: #f0f0f0;
+  font-size: 1.2em;
+}
+
+.tos-section b {
+  color: #ffffff;
+}
+
+
+.contacts a {
+  color: #8b5cf6;            /* warna teks link */
+  text-decoration: none;  /* hilangin underline */
+  font-weight: 500;
+  transition: 0.2s;
+  
+}
+
+.contacts a:hover {
+  color: #fff;            /* jadi lebih terang kalau hover */
+  text-decoration: underline;
+}

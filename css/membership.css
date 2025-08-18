@@ -1,0 +1,176 @@
+/* ===== Membership Section ===== */
+#Membership {
+  text-align: center;
+}
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+}
+
+.membership-card {
+  background: #161b22;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membership-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.logo-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.logo-text img {
+  width: 36px;
+  height: 36px;
+}
+
+.logo-text span {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.membership-card h3 {
+  font-size: 1.2rem;
+  color: #8b5cf6;
+  margin-bottom: 8px;
+}
+
+.membership-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.membership-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color:#8b5cf6;
+  color: #000;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.membership-btn:hover {
+  background-color: linear-gradient(to right, #8859f7,#8b5cf6);;
+}
+.membership-card ul {
+  list-style: disc; /* bullet default, bisa diganti 'circle' atau 'square' */
+  padding-left: 20px; /* jarak bullet dari tepi */
+  margin: 10px 0; /* spasi atas-bawah */
+ font-size: 0.9rem;
+  color: #c9d1d9; /* ukuran teks */
+}
+
+.membership-card ul li {
+  margin-bottom: 5px; /* jarak antar item */
+  line-height: 1.4; /* biar nggak terlalu rapat */
+}
+
+/* Optional: bullet custom warna / icon */
+.membership-card ul li::marker {
+  color: #8b5cf6; /* warna bullet */
+  font-size: 1rem;
+}
+
+/* Modal Style - Join Membership */
+/* ==== Modal Join Membership ==== */
+
+.joinMemberModal {
+  display: none; /* default hidden */
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(6px);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+
+.joinMemberModal .modal-content {
+  background: #161b22;
+  border-radius: 12px;
+  padding: 25px 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 0.25s ease;
+}
+
+.joinMemberModal h2 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.joinMemberModal p {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.option-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.option-btn i { font-size: 1.2rem; }
+
+.option-btn:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.option-btn.discord { background: #5865F2; }
+.option-btn.browser { background: #4f545c; }
+.option-btn.mobile  { background: #3ba55d; }
+
+.cancel-btn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid #444;
+  color: #bbb;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  color: #fff;
+  border-color: #666;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

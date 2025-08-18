@@ -1,0 +1,93 @@
+
+/* ===== Dynamic Island Navbar ===== */
+.navbar.dynamic-island {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #161b2261;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 30px;
+  padding: 12px 30px;
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  width: auto;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.logo img {
+  height: 53px;
+  width: 100px;
+  object-fit: cover;
+  margin-top: 8px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #8b5cf6;
+}
+
+.hamburger {
+  display: none;
+  font-size: 36px;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ===== Responsive Mobile Navbar ===== */
+@media (max-width: 768px) {
+  .navbar.dynamic-island {
+    width: 90%;
+    border-radius: 20px;
+    padding: 10px 16px;
+    background:#161b2261;
+  }
+
+  .nav-content {
+    padding: 0 10px;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: #161b2261;
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 12px;
+    z-index: 9999;
+  }
+
+  .nav-links.show {
+    display: center;
+  }
+}

@@ -1,0 +1,451 @@
+/* Home Hero Section */
+.home-hero-section {
+  padding: 200px 20px 150px; /* top 100px, bottom 60px */
+  margin-bottom: 0;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.home-text {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.home-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.home-text h1 .highlight {
+  color: #35065e;
+}
+
+.home-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ccc;
+  margin-bottom: 30px;
+
+  /* Tambahan fix ⬇️ */
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;         /* jaga agar tidak overflow */
+}
+
+
+.logo-row {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.mini-logo {
+  height: 120px;
+  filter: brightness(0.95);
+}
+
+.home-image {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-image img {
+  max-width: 70%;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(255, 100, 200, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-hero-section {
+    padding-top: 80px;
+    padding-bottom: 20px; /* perbaikan */
+  }
+
+  .home-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-bottom: 20px !important; 
+    margin-bottom: 0; /* perbaikan */
+  }
+  .hero-buttons {
+    flex-direction: column; /* tumpuk ke bawah */
+  }
+  .hero-buttons a {
+    width: 100%; /* tombol full */
+  }
+
+    
+  .home-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .home-text p {
+    margin-bottom: 15px; /* perbaikan */
+  }
+
+  .home-image {
+    margin-top: 60px;
+    margin-bottom: 0; /* perbaikan */
+  }
+
+  .home-image img {
+    max-width: 250px;
+    margin-bottom: 0; /* perbaikan */
+  }
+
+  .logo-row {
+  margin-left: 60px;
+  }
+}
+
+
+
+/* === Header Section === */
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00ffff;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #bbb;
+  max-width: 700px;
+  margin: 0 auto;
+}
+/* ===== Hero Buttons ===== */
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  
+}
+
+.hero-buttons a {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-join {
+ background-color: transparent;
+  border: 1px solid #5f5cff;
+  color: #ccc;
+}
+
+.btn-bot {
+ background-color: transparent;
+  border: 1px solid #4a0189;
+  color: #ccc;
+}
+
+.btn-join:hover {
+  background-color: #5f5cff;
+}
+
+.btn-bot:hover {
+  background-color: #4a0189;
+}
+@media (max-width: 768px) {
+  .hero-buttons {
+   width: auto;
+  }
+}
+
+
+
+
+
+/* === Server Section === */
+.server-section {
+  padding: 4rem 1rem;
+  background: var(--bg-main);
+}
+
+/* === Grid Container (2 kolom) === */
+.server-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem; /* Lebih rapet */
+  max-width: 1000px; /* Bisa dikurangin dari 1200px juga kalau mau lebih kecil totalnya */
+  margin: 0 auto;
+  align-items: flex-start;
+}
+/* Animasi Fade Up */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gunakan di elemen yang ingin dianimasikan */
+.fade-up {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+
+
+/* ===== Struktur Utama ===== */
+.server-section {
+  padding: 4rem 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ffffff!important;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+
+
+
+/* ===== Statistik Kanan ===== */
+.server-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* desktop: 4 sejajar */
+  gap: 1rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+
+.stat-card {
+  background: #161b22;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.stat-card svg {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 10px;
+  fill: #7a5fff;
+}
+
+.stat-card span {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+}
+
+.stat-card p {
+font-size: 0.9rem;
+  color: #c9d1d9
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 768px) {
+  .server-stats {
+    grid-template-columns: repeat(2, 1fr); /* jadi 2 atas 2 bawah */
+  }
+}
+
+
+
+
+
+/* Live Preview Section */
+.live-preview-section {
+  padding: 4rem 1rem;
+}
+
+.server-widget-container {
+  background: rgba(22, 27, 34, 0.85);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.server-widget-container iframe {
+  border-radius: 8px;
+}
+
+
+
+
+
+.close-btn {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 1rem;
+}
+
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.sidebar-menu li a:hover {
+   transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-footer {
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.recruit-btn {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 12px;
+  background: #ecb27d;
+  color: #2c1c10;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.recruit-btn:hover {
+  background: #e89f5d;
+}
+
+
+
+/* ===== Feature Section ===== */
+.feature-section {
+  padding: 60px 20px;
+  text-align: center;
+  
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #8b5cf6;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #bbb;
+  margin-bottom: 40px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feature-card {
+    background-color: #161b22;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+   /* efek membesar */
+ transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.feature-card img {
+  width: 26px;
+  height: 26px;
+  margin-bottom: 10px;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  color: #8b5cf6;
+  margin: 8px;
+}
+
+.feature-card p {
+  color: #ccc;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+
+
+@media (max-width: 640px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

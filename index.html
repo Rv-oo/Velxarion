@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vel`Xarion</title>
+    <link rel="stylesheet" href="style.css?v=3" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/Tak berjudul176_20250411184027.png"
+    />
+  </head>
+
+  <body>
+    <!-- Mobile Popup Menu -->
+    <div class="topbar" id="topbar">
+      <ul class="topbar-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#servers">Servers</a></li>
+        <li><a href="bot.html">Official Bot</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="topbar-footer">
+        <!-- <button class="recruit-btn">LOGIN</button>      <ini sebagai tombol> -->
+      </div>
+    </div>
+
+    <!-- Navbar for desktop -->
+    <nav class="navbar dynamic-island">
+      <div class="nav-content">
+        <div class="logo">
+          <img src="assets/logo.jpg" alt="Logo" class="sidebar-logo" />
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#servers">Server</a></li>
+          <li><a href="bot.html">Official Bot</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button class="hamburger" id="hamburger-btn">☰</button>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home-hero-section">
+      <div class="home-container">
+        <div class="home-text">
+          <h1>WELCOME TO <span class="highlight">Vel`Xarion</span></h1>
+          <p>
+            "Join a community where your ideas come alive, friendships grow
+            stronger, and every moment sparks laughter and excitement."
+          </p>
+          <div class="logo-row">
+            <img
+              src="assets//Tak berjudul176_2ddd0250411184027.png"
+              alt="VoxSyraa Logo"
+              class="mini-logo"
+            />
+            <img
+              src="assets/syraaaaaaa.png"
+              alt="KIMEU Logo"
+              class="mini-logo"
+            />
+          </div>
+          <div class="hero-buttons">
+            <a href="https://discord.gg/velxarion" class="btn-join"
+              >Join Server</a
+            >
+            <a href="bot.html#about-bot" class="btn-bot">Official Bot</a>
+          </div>
+        </div>
+        <div class="home-image">
+          <img src="assets/logo name.png" alt="voxsy Character" />
+        </div>
+      </div>
+    </section>
+
+
+<!-- ======= Section Grid Server ======= -->
+<section id="servers" class="server-section">
+  <div class="section-header text-center">
+    <h2 class="section-title">Our Server</h2>
+    <p class="section-subtitle">
+      Join the Vel`Xarion community and discover our exclusive bot and server features.
+    </p>
+  </div>
+
+  <div class="server-stats">
+    <!-- Total Members -->
+    <div class="stat-card">
+      <div class="stat-icon">
+        <svg width="32" height="32" fill="#facc15" viewBox="0 0 24 24">
+          <path d="M12 17.27L18.18 21l-1.63-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.45 4.73L5.82 21z"/>
+        </svg>
+      </div>
+      <span id="server-total" class="counter server-counter">0</span>
+      <p>Total Members</p>
+    </div>
+
+    <!-- Members Online -->
+    <div class="stat-card">
+      <div class="stat-icon">
+        <svg width="32" height="32" fill="#8b5cf6" viewBox="0 0 24 24">
+          <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+        </svg>
+      </div>
+      <span id="server-online" class="counter server-counter">0</span>
+      <p>Members Online</p>
+    </div>
+
+    <!-- Channels -->
+    <div class="stat-card">
+      <div class="stat-icon">
+        <svg width="32" height="32" fill="#10b981" viewBox="0 0 24 24">
+          <path d="M4 5h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V7a2 2 0 012-2zm0 2v10h16V7H4zm2.5 2l2.5 2.5L6.5 14 5 12.5l1.5-1.5L5 9.5 6.5 8zM11 14h5v-1.5h-5V14z"/>
+        </svg>
+      </div>
+      <span id="server-channels" class="counter server-counter">0</span>
+      <p>Channels</p>
+    </div>
+
+    <!-- Community (static) -->
+    <div class="stat-card">
+      <div class="stat-icon">
+        <svg width="32" height="32" fill="#3b82f6" viewBox="0 0 24 24">
+          <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 2c.68 0 1.35.08 1.99.23l-1.49 1.49a1 1 0 00.01 1.41l1.41 1.41a1 1 0 001.41-.01l1.49-1.49c.15.64.23 1.31.23 1.99 0 1.42-.38 2.76-1.05 3.9L14.83 12a1 1 0 00-1.41-.01l-1.41 1.41a1 1 0 00.01 1.41l1.49 1.49a8.04 8.04 0 01-3.9 1.05c-.68 0-1.35-.08-1.99-.23l1.49-1.49a1 1 0 00-.01-1.41l-1.41-1.41a1 1 0 00-1.41.01l-1.49 1.49a8.04 8.04 0 01-1.05-3.9c0-.68.08-1.35.23-1.99l1.49 1.49a1 1 0 001.41.01l1.41-1.41a1 1 0 00-.01-1.41L5.23 4.99A8.04 8.04 0 0112 4z"/>
+        </svg>
+      </div>
+      <span><strong>Global</strong></span>
+      <p>Community</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- Feature Section -->
+    <section id="feature" class="section feature-section">
+      <h2 class="section-title">Features</h2>
+      <p class="section-subtitle">Explore the amazing features of this server</p>
+
+      <div class="feature-grid">
+        <div class="feature-card fade-in">
+         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-venetian-mask-icon lucide-venetian-mask"><path d="M18 11c-1.5 0-2.5.5-3 2"/><path d="M4 6a2 2 0 0 0-2 2v4a5 5 0 0 0 5 5 8 8 0 0 1 5 2 8 8 0 0 1 5-2 5 5 0 0 0 5-5V8a2 2 0 0 0-2-2h-3a8 8 0 0 0-5 2 8 8 0 0 0-5-2z"/><path d="M6 11c1.5 0 2.5.5 3 2"/></svg>
+          <h3>Exclusive Custom Roles </h3>
+          <p>
+            Get exclusive custom roles from boost servers or from perks donations
+          </p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot-icon lucide-bot"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+          <h3>Official Bot & Bot games</h3>
+          <p>access the official bot from Vel`Xarion or access game bots such as OwO, Pokemeow and others.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-audio-lines-icon lucide-audio-lines"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/></svg>
+          <h3>Custom Voice Channels</h3>
+          <p>
+            access to create private voice channels at any time
+          </p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1250/1250598.png"
+            alt="Logging System"
+          />
+          <h3>Logging System</h3>
+          <p>Keep track of server activity with detailed event logs.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png"
+            alt="Welcome Message"
+          />
+          <h3>Welcome Message</h3>
+          <p>
+            Make your server more welcoming with customizable greetings for new
+            members.
+          </p>
+        </div>
+
+        <div class="feature-card fade-in">
+         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tags-icon lucide-tags"><path d="M13.172 2a2 2 0 0 1 1.414.586l6.71 6.71a2.4 2.4 0 0 1 0 3.408l-4.592 4.592a2.4 2.4 0 0 1-3.408 0l-6.71-6.71A2 2 0 0 1 6 9.172V3a1 1 0 0 1 1-1z"/><path d="M2 7v6.172a2 2 0 0 0 .586 1.414l6.71 6.71a2.4 2.4 0 0 0 3.191.193"/><circle cx="10.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+          <h3>Servers Tags</h3>
+          <p>
+            get interesting tags from Vel`Xarion server
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Preview Member Section -->
+    <section id="live-preview" class="live-preview-section">
+      <div class="section-header text-center">
+        <h2 class="section-title">Live Preview Member</h2>
+        <p class="section-subtitle">
+      check online members live here
+    </p>
+      </div>
+
+      <div class="server-widget-container fade-up">
+        <iframe
+          src="https://discord.com/widget?id=1209480713393672222&theme=dark"
+          width="350"
+          height="500"
+          allowtransparency="true"
+          frameborder="0"
+          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+        >
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section id="Membership" class="section text-center no-anim">
+      <h2 class="section-title">donation</h2>
+      <p class="section-subtitle">Benefits of donating on the Vel`Xarion server</p>
+
+      <div class="membership-grid">
+        <!-- Grid 1 -->
+        <div class="membership-card no-anim">
+          <div class="logo-text">
+            <img
+              src="assets/coin-removebg-preview.png"
+              alt="Patreon"
+            />
+            <span>Shadowbound Heir</span>
+          </div>
+          <h3>Rp20.000</h3>
+          <ul>
+      <li>Get a role @Shadowbound Heir</li>
+      <li>Free Custom Role [1 month]</li>
+      <li>can change name</li>
+      <li>Other benefits can be seen on the server, in the #perks channel</li>
+    </ul>
+
+          <a href="#" class="membership-btn">Donate Now</a>
+        </div>
+
+        <!-- Grid 2 -->
+        <div class="membership-card no-anim">
+          <div class="logo-text">
+            <img
+              src="assets/boost-removebg-preview.png"
+              alt="Ko-fi"
+            />
+            <span>Abyssal Benefactor</span>
+          </div>
+          <h3>Boost</h3>
+            <ul>
+      <li>Get a role @Abyssal Benefactor</li>
+      <li>Free Custom Role [1 month]</li>
+      <li>can change name</li>
+      <li>Other benefits can be seen on the server, in the #perks channel</li>
+    </ul>
+        </div>
+
+        <!-- Grid 3 -->
+        <div class="membership-card no-anim">
+          <div class="logo-text">
+            <img
+              src="assets/owo-removebg-preview.png"
+              alt="Paypal"
+            />
+            <span>Beastlord Donator</span>
+          </div>
+          <h3>2.000.000 OwO</h3>
+            <ul>
+      <li>Get a role @Beastlord Donator</li>
+      <li>Free Custom Role [14 Day]</li>
+      <li>can change name</li>
+      <li>Other benefits can be seen on the server, in the #perks channel</li>
+    </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Modal Join Membership -->
+    <!-- Modal Join Membership -->
+    <!-- Trigger -->
+
+    <!-- Modal -->
+    <div class="joinMemberModal">
+      <div class="modal-content">
+        <h2>Choose Your Platform</h2>
+        <p>Select how you’d like to join our community</p>
+
+        <a
+          href=""
+          target="_blank"
+          class="option-btn discord"
+        >
+          <i class="fab fa-discord"></i> Donate via Tako.id
+        </a>
+        <a
+          href="https://discord.com/channels/@me"
+          target="_blank"
+          class="option-btn browser"
+        >
+          <i class="fas fa-globe"></i> Join via Trakteer
+        </a>
+        <button class="cancel-btn">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Ikon (FontAwesome) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Footer Info Section -->
+    <section class="footer-info-section">
+      <div class="footer-info-container">
+        <div class="footer-info-left">
+          <img src="assets/logo.jpg" alt="Logo" class="footer-info-logo" />
+          <p class="footer-desc">
+            Vel`Xarion is a platform empowering Discord communities with
+            powerful tools and modern designs.
+          </p>
+          <p class="footer-tagline">
+            "Empowering Communities, One Bot at a Time."
+          </p>
+        </div>
+        <div class="footer-info-right">
+          <div class="footer-column">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#servers">Servers</a></li>
+              <li><a href="bot.html">Official Bot</a></li>
+               <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="mailto:support@velxarion.com">Email Us</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#faq">FAQs</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="footer-container">
+        <div class="footer-left">
+          <p>&copy; 2025 Vel`Xarion. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script for Fade In -->
+    <script src="script.js"></script>
+    <script src="server-stats.js" defer></script>
+  </body>
+</html>

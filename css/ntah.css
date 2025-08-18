@@ -1,0 +1,19 @@
+/* ===== Reset & Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('/assets/3451499.jpg') center center fixed;
+  background-size: cover;
+  background-color: #121212; 
+  color: #f0f0f0;
+  line-height: 1.6;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,88 @@
+
+/* Contact Form */
+.contact-section {
+  display: grid;
+  justify-content: center;
+  align-content: start; 
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 220px; /* jadi turun ke bawah */
+}
+
+
+.contact-box {
+  background: #161b2261;
+  border-radius: 12px;
+  padding: 30px;
+  width: 350px;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+
+#contactForm {
+  background:#161b22;
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.contact-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.contact-box textarea {
+  height: 100px;
+  resize: none;
+}
+
+#sendBtn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #8859f7,#8b5cf6);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#sendBtn:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+.status {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.send-btn:hover {
+  opacity: 0.85;
+}

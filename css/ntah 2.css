@@ -1,0 +1,27 @@
+/* Hilangkan animasi masuk di Feature & Membership */
+#feature .fade-in,
+#Membership .fade-in {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+#feature .fade-in.visible,
+#Membership .fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hilangkan efek animasi Membership */
+
+
+/* Hilangkan animasi masuk khusus Membership */
+#Membership.no-anim,
+#Membership.no-anim .membership-card.no-anim {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+/* Mobile Popup Topbar */
+
+
