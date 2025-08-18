@@ -1,6 +1,6 @@
 async function fetchBotStats() {
   try {
-    const BOT_API_URL = "http://hnode1.roverdev.xyz";
+    const BOT_API_URL = "http://hnode1.roverdev.xyz:27433";
     const res = await fetch(`${process.env.BOT_API_URL}/api/bot`); 
     const data = await res.json();
 
@@ -48,6 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
   fetchBotStats();
   setInterval(fetchBotStats, 10000);
 });
+
 
 
 
