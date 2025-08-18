@@ -24,7 +24,7 @@ function animateCounter(id, start, end, duration = 1000) {
 
 async function fetchServerStats() {
   try {
-    const res = await fetch(`${process.env.BOT_API_URL}/api/server-stats`); 
+    const res = await fetch("${process.env.BOT_API_URL}/api/server-stats"); 
     const data = await res.json();
 
     const totalEl = document.getElementById("server-total");
@@ -59,6 +59,7 @@ async function fetchServerStats() {
 
 fetchServerStats();
 setInterval(fetchServerStats, 30000);
+
 
 
 
