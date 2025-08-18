@@ -89,11 +89,16 @@
 
 @media (max-width: 480px) {
   .contact-section {
-    padding-bottom: 1px; /* sesuaikan sesuai kebutuhan */
+    min-height: auto; /* biar tinggi section menyesuaikan konten */
+    padding-top: 100px; /* turun lebih wajar di mobile */
+    padding-bottom: 30px; /* jarak bawah pas */
   }
 
   .contact-box {
-    margin-bottom: 20px; /* jika mau memberi jarak antar box */
+    width: 100%;
+    margin-bottom: 0; /* kalau cuma 1 box, nggak perlu margin */
   }
 }
+
+
 
