@@ -86,3 +86,13 @@
 .send-btn:hover {
   opacity: 0.85;
 }
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding-bottom: 50px; /* sesuaikan sesuai kebutuhan */
+  }
+
+  .contact-box {
+    margin-bottom: 20px; /* jika mau memberi jarak antar box */
+  }
+}
