@@ -1,6 +1,6 @@
 async function fetchBotStats() {
   try {
-    const res = await fetch("/bot-stats"); // ini ke API route vercel
+    const res = await fetch("api/bot-stats"); // ini ke API route vercel
     const data = await res.json();
 
     const statusEl = document.getElementById("status");
@@ -43,3 +43,4 @@ window.addEventListener("DOMContentLoaded", () => {
   fetchBotStats();
   setInterval(fetchBotStats, 10000);
 });
+
