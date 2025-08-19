@@ -23,7 +23,7 @@ function animateCounter(id, start, end, duration = 1000) {
 
 async function fetchServerStats() {
   try {
-    const res = await fetch("/api/server-stats"); // ke API route vercel
+    const res = await fetch("/server-statsss"); // ke API route vercel
     const data = await res.json();
 
     const totalEl = document.getElementById("server-total");
@@ -55,3 +55,4 @@ async function fetchServerStats() {
 
 fetchServerStats();
 setInterval(fetchServerStats, 30000);
+
