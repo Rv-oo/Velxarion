@@ -1,39 +1,57 @@
-const express = require("express");
-const fetch = require("node-fetch");
-const path = require("path");
-require("dotenv").config();
+function animateCounter(id, start, end, duration = 1000) {
+  const el = document.getElementById(id);
+  if (!el) return;
 
-const app = express();
-const PORT = process.env.PORT || 3000;
-const BOT_API_URL = process.env.BOT_API_URL;
+  const startTime = performance.now();
 
-app.use(express.static(path.join(__dirname, "public"))); // serve frontend files
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
 
-// Proxy bot status
-app.get("/api/bot-stats", async (req, res) => {
-  try {
-    const response = await fetch(`${BOT_API_URL}/api/bot`);
-    const data = await response.json();
-    res.json(data);
-  } catch (err) {
-    console.error("❌ Gagal fetch bot-stats:", err);
-    res.status(500).json({ error: "Gagal ambil data bot" });
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = Math.floor(start + (end - start) * eased);
+
+    el.textContent = value.toLocaleString();
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    }
   }
-});
 
-// Proxy server stats
-app.get("/api/server-stats", async (req, res) => {
+  requestAnimationFrame(update);
+}
+
+async function fetchServerStats() {
   try {
-    const response = await fetch(`${BOT_API_URL}/api/server-stats`);
-    const data = await response.json();
-    res.json(data);
+    const res = await fetch("/api/server-stats"); // proxy endpoint
+    const data = await res.json();
+
+    const totalEl = document.getElementById("server-total");
+    const onlineEl = document.getElementById("server-online");
+    const channelsEl = document.getElementById("server-channels");
+
+    const getNumber = (el) => {
+      const num = parseInt((el?.textContent || "0").replace(/[^\d]/g, ""));
+      return isNaN(num) ? 0 : num;
+    };
+
+    const currentTotal = getNumber(totalEl);
+    const currentOnline = getNumber(onlineEl);
+    const currentChannels = getNumber(channelsEl);
+
+    if (typeof data.totalMembers === "number") {
+      animateCounter("server-total", currentTotal, data.totalMembers);
+    }
+    if (typeof data.onlineMembers === "number") {
+      animateCounter("server-online", currentOnline, data.onlineMembers);
+    }
+    if (typeof data.totalChannels === "number") {
+      animateCounter("server-channels", currentChannels, data.totalChannels);
+    }
   } catch (err) {
-    console.error("❌ Gagal fetch server-stats:", err);
-    res.status(500).json({ error: "Gagal ambil data server" });
+    console.error("❌ Gagal ambil data server:", err);
   }
-});
+}
 
-app.listen(PORT, () => {
-  console.log(`🌐 Web server berjalan di http://localhost:${PORT}`);
-});
-
+fetchServerStats();
+setInterval(fetchServerStats, 30000);
