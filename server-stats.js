@@ -23,7 +23,8 @@ function animateCounter(id, start, end, duration = 1000) {
 
 async function fetchServerStats() {
   try {
-    const res = await fetch("http://uk-01.rrhosting.eu:1299/api/server-stats");
+    // ⚡ pakai proxy API (HTTPS lewat Vercel)
+    const res = await fetch("/api/server-stats");
     const data = await res.json();
 
     const totalEl = document.getElementById("server-total");
