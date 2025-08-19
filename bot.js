@@ -1,6 +1,6 @@
 async function fetchBotStats() {
   try {
-    const res = await fetch("/api/bot-stats"); // fetch via proxy
+    const res = await fetch("/bot-stats"); // ini ke API route vercel
     const data = await res.json();
 
     const statusEl = document.getElementById("status");
