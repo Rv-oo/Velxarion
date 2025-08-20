@@ -24,12 +24,18 @@
   justify-content: center;
 }
 
-.footer-logo {
-  width: 55px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
+.footer-logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #7f5af0, #2cb67d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ font-family: 'Orbitron', sans-serif;
+
+/* Bisa ganti font sesuai selera */
+  letter-spacing: 2px;
 }
+
 
 .footer-right {
   display: flex;
