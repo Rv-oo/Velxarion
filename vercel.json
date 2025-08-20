@@ -1,8 +1,14 @@
 {
   "rewrites": [
-    { "source": "/bot", "destination": "/bot.html" }
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/tos", "destination": "/tos.html" }
   ],
   "redirects": [
-    { "source": "/bot.html", "destination": "/bot", "permanent": true }
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/privacy.html", "destination": "/privacy", "permanent": true },
+    { "source": "/tos.html", "destination": "/tos", "permanent": true }
   ]
 }
