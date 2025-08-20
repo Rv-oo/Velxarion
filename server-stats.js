@@ -35,6 +35,7 @@ async function fetchServerStats() {
       return isNaN(num) ? 0 : num;
     };
 
+    // ambil nilai awal langsung dari HTML, jadi animasi mulai dari nilai terakhir yang ada
     const currentTotal = getNumber(totalEl);
     const currentOnline = getNumber(onlineEl);
     const currentChannels = getNumber(channelsEl);
@@ -53,8 +54,8 @@ async function fetchServerStats() {
   }
 }
 
+// panggil segera supaya animasi jalan tanpa reload
 fetchServerStats();
+
+// update otomatis setiap 30 detik
 setInterval(fetchServerStats, 30000);
-
-
-
