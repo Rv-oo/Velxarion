@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/bot", "destination": "/bot.html" }
+  ],
+  "redirects": [
+    { "source": "/bot.html", "destination": "/bot", "permanent": true }
+  ]
+}
