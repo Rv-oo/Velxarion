@@ -3,12 +3,16 @@
     { "source": "/", "destination": "/index.html" },
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/privacy", "destination": "/privacy.html" },
-    { "source": "/tos", "destination": "/tos.html" }
+    { "source": "/tos", "destination": "/tos.html" },
+    { "source": "/bot", "destination": "/bot.html" },
+    { "source": "/server", "destination": "/index.html#server" }
   ],
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true },
     { "source": "/contact.html", "destination": "/contact", "permanent": true },
     { "source": "/privacy.html", "destination": "/privacy", "permanent": true },
-    { "source": "/tos.html", "destination": "/tos", "permanent": true }
+    { "source": "/tos.html", "destination": "/tos", "permanent": true },
+    { "source": "/bot.html", "destination": "/bot", "permanent": true },
+    { "source": "/server.html", "destination": "/server", "permanent": true }
   ]
 }
