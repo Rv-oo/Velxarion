@@ -5,7 +5,7 @@
     { "source": "/privacy", "destination": "/privacy.html" },
     { "source": "/tos", "destination": "/tos.html" },
     { "source": "/bot", "destination": "/bot.html" },
-    { "source": "/server", "destination": "/index.html#servers" }
+    { "source": "/server", "destination": "/server.html" }
   ],
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true },
