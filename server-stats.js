@@ -1,63 +1,38 @@
-function animateCounter(id, start, end, duration = 1000) {
-  const el = document.getElementById(id);
-  if (!el) return;
-
-  const startTime = performance.now();
-
-  function update(currentTime) {
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-
-    const eased = 1 - Math.pow(1 - progress, 3);
-    const value = Math.floor(start + (end - start) * eased);
-
-    el.textContent = value.toLocaleString();
-
-    if (progress < 1) {
-      requestAnimationFrame(update);
-    }
-  }
-
-  requestAnimationFrame(update);
-}
+let firstLoad = true;
 
 async function fetchServerStats() {
   try {
-    const res = await fetch("/api/server-stats"); // ke API route vercel
+    const res = await fetch("/api/server-stats");
     const data = await res.json();
 
     const totalEl = document.getElementById("server-total");
     const onlineEl = document.getElementById("server-online");
     const channelsEl = document.getElementById("server-channels");
 
-    const getNumber = (el) => {
-      const num = parseInt((el?.textContent || "0").replace(/[^\d]/g, ""));
-      return isNaN(num) ? 0 : num;
-    };
+    if (firstLoad) {
+      // isi langsung tanpa animasi
+      if (typeof data.totalMembers === "number") {
+        totalEl.textContent = data.totalMembers.toLocaleString();
+      }
+      if (typeof data.onlineMembers === "number") {
+        onlineEl.textContent = data.onlineMembers.toLocaleString();
+      }
+      if (typeof data.totalChannels === "number") {
+        channelsEl.textContent = data.totalChannels.toLocaleString();
+      }
+      firstLoad = false;
+    } else {
+      // baru pakai animasi untuk update berikutnya
+      const getNumber = (el) => {
+        const num = parseInt((el?.textContent || "0").replace(/[^\d]/g, ""));
+        return isNaN(num) ? 0 : num;
+      };
 
-    // ambil nilai awal langsung dari HTML, jadi animasi mulai dari nilai terakhir yang ada
-    const currentTotal = getNumber(totalEl);
-    const currentOnline = getNumber(onlineEl);
-    const currentChannels = getNumber(channelsEl);
-
-    if (typeof data.totalMembers === "number") {
-      animateCounter("server-total", currentTotal, data.totalMembers);
-    }
-    if (typeof data.onlineMembers === "number") {
-      animateCounter("server-online", currentOnline, data.onlineMembers);
-    }
-    if (typeof data.totalChannels === "number") {
-      animateCounter("server-channels", currentChannels, data.totalChannels);
+      animateCounter("server-total", getNumber(totalEl), data.totalMembers);
+      animateCounter("server-online", getNumber(onlineEl), data.onlineMembers);
+      animateCounter("server-channels", getNumber(channelsEl), data.totalChannels);
     }
   } catch (err) {
     console.error("❌ Gagal ambil data server:", err);
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  fetchServerStats(); // langsung jalan saat page siap
-  setInterval(fetchServerStats, 10000);
-});
-
-
-
