@@ -18,7 +18,7 @@
 <div class="topbar" id="topbar">
   <ul class="topbar-menu">
     <li><a href="index.html">Home</a></li>
-    <li><a href="index.html#servers">Servers</a></li>
+    <li><a href="index.html">Servers</a></li>
     <li><a href="bot.html">Official Bot</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
@@ -49,19 +49,36 @@
 
 <!-- Contact Section -->
 <section class="contact-section">
-  <div class="contact-box">
-    <h2>Contact</h2>
-    <form action="https://formspree.io/f/xgvzqper" method="POST" id="contactForm">
-  <input type="text" id="name" name="name" placeholder="Your Name..." required>
-  <input type="email" id="email" name="email" placeholder="example123@gmail.com" required>
-  <input type="text" id="title" name="title" placeholder="Title..." required>
-  <textarea id="message" name="message" placeholder="Type Here..." required></textarea>
-  <button type="submit" id="sendBtn">Send Now →</button>
-  <p id="formStatus" class="status"></p>
-</form>
+  <div class="contact-container">
+
+    <!-- Form -->
+    <div class="contact-box">
+      <h2>Contact</h2>
+      <form action="https://formspree.io/f/xgvzqper" method="POST" id="contactForm">
+        <input type="text" id="name" name="name" placeholder="Your Name..." required>
+        <input type="email" id="email" name="email" placeholder="example123@gmail.com" required>
+        <input type="text" id="title" name="title" placeholder="Title..." required>
+        <textarea id="message" name="message" placeholder="Type Here..." required></textarea>
+        <button type="submit" id="sendBtn">Send Now →</button>
+        <p id="formStatus" class="status"></p>
+      </form>
+    </div>
+
+    <!-- Info -->
+    <div class="contact-info">
+      <h2>contact info</h2>
+      <p><strong>Email:</strong><br>
+        <a href="mailto:example123@gmail.com">example123@gmail.com</a>
+      </p>
+      <p><strong>Discord:</strong><br>
+        <a href="https://discord.gg/yourInvite" target="_blank">Join our Discord →</a>
+      </p>
+    </div>
 
   </div>
 </section>
+
+
 
 
 
@@ -110,4 +127,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
