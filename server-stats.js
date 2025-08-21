@@ -54,9 +54,10 @@ async function fetchServerStats() {
   }
 }
 
-// panggil segera supaya animasi jalan tanpa reload
-fetchServerStats();
+document.addEventListener("DOMContentLoaded", () => {
+  fetchServerStats(); // langsung jalan saat page siap
+  setInterval(fetchServerStats, 10000);
+});
 
-// update otomatis setiap 30 detik
-setInterval(fetchServerStats, 10000);
+
 
