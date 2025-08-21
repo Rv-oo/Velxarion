@@ -22,5 +22,6 @@ async function fetchServerStats() {
 
 document.addEventListener("DOMContentLoaded", () => {
   fetchServerStats();                // load pertama kali
-  setInterval(fetchServerStats, 10000); // refresh tiap 10 detik
+  setInterval(fetchServerStats, 1000); // refresh tiap 10 detik
 });
+
