@@ -5,14 +5,15 @@ async function fetchServerStats() {
 
     const data = await res.json();
 
+    // langsung isi dari API, tidak parse isi lama
     document.getElementById("server-total").textContent =
-      typeof data.totalMembers === "number" ? data.totalMembers.toLocaleString() : "-";
+      typeof data.totalMembers === "number" ? data.totalMembers.toLocaleString() : "N/A";
 
     document.getElementById("server-online").textContent =
-      typeof data.onlineMembers === "number" ? data.onlineMembers.toLocaleString() : "-";
+      typeof data.onlineMembers === "number" ? data.onlineMembers.toLocaleString() : "N/A";
 
     document.getElementById("server-channels").textContent =
-      typeof data.totalChannels === "number" ? data.totalChannels.toLocaleString() : "-";
+      typeof data.totalChannels === "number" ? data.totalChannels.toLocaleString() : "N/A";
 
   } catch (err) {
     console.error("❌ Gagal ambil data server:", err);
@@ -20,6 +21,6 @@ async function fetchServerStats() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetchServerStats();           // langsung load pertama kali
+  fetchServerStats();                // load pertama kali
   setInterval(fetchServerStats, 10000); // refresh tiap 10 detik
 });
