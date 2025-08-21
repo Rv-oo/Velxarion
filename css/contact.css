@@ -1,12 +1,12 @@
 
 /* Contact Form */
 .contact-section {
-  display: grid;
+  display: flex;
   justify-content: center;
   align-content: start; 
   min-height: 100vh;
   text-align: center;
-  padding-top: 220px; /* jadi turun ke bawah */
+  padding-top: 180px; /* jadi turun ke bawah */
 }
 
 
@@ -14,7 +14,7 @@
   background: #161b2261;
   border-radius: 12px;
   padding: 30px;
-  width: 350px;
+  width: 400px;
   color: #fff;
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
@@ -100,5 +100,88 @@
   }
 }
 
+/* Form Box */
 
 
+.contact-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.contact-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-box button:hover {
+  opacity: 0.9;
+}
+
+/* Info Box */
+.contact-info {
+  flex: 1;
+  background: #111318;
+  padding: 30px;
+  border-radius: 15px;
+  width:10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  color: #ccc;
+}
+
+.contact-info h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.contact-info a {
+  color: #9d6bff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-info a:hover {
+  color: #fff;
+}
+
+/* Container biar form & info sejajar */
+.contact-container {
+  display: flex;
+  gap: 100px;
+  max-width: 1000px;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive biar di HP jadi 1 kolom */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-box,
+  .contact-info {
+    width: 100%;
+    max-width: 400px;
+  }
+}
