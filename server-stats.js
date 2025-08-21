@@ -58,4 +58,5 @@ async function fetchServerStats() {
 fetchServerStats();
 
 // update otomatis setiap 30 detik
-setInterval(fetchServerStats, 30000);
+setInterval(fetchServerStats, 10000);
+
